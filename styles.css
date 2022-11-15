@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+#container {
+display: grid;
+grid-template-columns: repeat(16, 30px [col-start]);
+margin: auto;
+}
+
+
+
+
