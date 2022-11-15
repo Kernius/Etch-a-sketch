@@ -10,5 +10,22 @@ function createSketch () {
 
 createSketch ();
 
+function paintBoxes () {
+    const gridBoxes = document.querySelectorAll('#container > div');
+    gridBoxes.forEach((item) => { 
+    item.addEventListener('click', () => {
+    gridBoxes.forEach((item) => { 
+        item.addEventListener('mouseover', () => {
+            item.style.cssText = "background: red;";
+            return;
+
+    });
+    });
+    });
+    });
+
+}
+
+paintBoxes ();
 
 
