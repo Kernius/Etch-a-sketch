@@ -96,10 +96,13 @@ function clearSketch() {
 
 /* Eraser button*/
 
+const eraser = document.querySelector('#erase');
+eraser.addEventListener('click', enableEraser);
 
 function enableEraser () {
-    const eraser = document.querySelector('#erase');
-        eraser.addEventListener('click', () => {
+        if(rainbowIsActive){
+            return;
+        }
     if (!eraserIsActive){
         eraserIsActive = true;
         eraser.classList.remove('erase');
@@ -109,16 +112,18 @@ function enableEraser () {
         eraser.classList.remove('eraseActive');
         eraser.classList.add('erase');
     }
-});
-
 }
 
-enableEraser();
-
 /* Toggle rainbow */
+
+const rainbow = document.querySelector('#rainbow');
+rainbow.addEventListener('click', toggleRainbow)
+
+
     function toggleRainbow () {
-        const rainbow = document.querySelector('#rainbow');
-        rainbow.addEventListener('click', () => {
+        if (eraserIsActive) {
+            return;
+        }
     if (!rainbowIsActive) {
         rainbowIsActive = true;
         rainbow.classList.remove('rainbow');
@@ -127,15 +132,10 @@ enableEraser();
         rainbowIsActive = false;
         rainbow.classList.remove('rainbowActive');
         rainbow.classList.add('rainbow');
-    }
-
-
-    });
-
-    
+    }  
 }
 
-toggleRainbow();
+
 
 
 
