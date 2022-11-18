@@ -48,19 +48,14 @@ align-items:center;
   border: 0.1vw solid black;
 }
 
-#clear {
+#clear, #erase, #rainbow {
   width:12vw;
   height: 2vw;
   border-radius:1vw;
 }
 
-#erase {
-  width:12vw;
-  height:2vw;
-  border-radius:1vw;
-}
 
-.eraseActive {
+.eraseActive, .rainbowActive {
     width:12vw;
     height:2vw;
     border-radius:1vw;
@@ -69,12 +64,12 @@ align-items:center;
 }
 
 #color {
-  width:12vw;
+  width:9vw;
   height:2vw;
-  border-radius:;
   background-color: transparent;
   border:none;
 }
+
 
 
 

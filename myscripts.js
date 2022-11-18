@@ -1,7 +1,8 @@
 let container = document.querySelector('#container');
 const gridBoxes = document.querySelectorAll('#container > div');
 let isPainting = false;
-let eraserActive = false;
+let eraserIsActive = false;
+let rainbowIsActive = false;
 
 /* Default sketch creation */
 
@@ -67,12 +68,15 @@ function togglePaint () {
 
 
 function paint(e) {
-    if (!eraserActive){
+    if (!eraserIsActive && !rainbowIsActive){
         let color = document.querySelector('#color').value;
         e.target.style.backgroundColor = color;
-    } else { 
+    } else if (eraserIsActive) { 
         e.target.style.backgroundColor = "white";
-    }
+    } else if (rainbowIsActive) {
+        e.target.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    } 
+
     
 }
 
@@ -96,12 +100,12 @@ function clearSketch() {
 function enableEraser () {
     const eraser = document.querySelector('#erase');
         eraser.addEventListener('click', () => {
-    if (!eraserActive){
-        eraserActive = true;
+    if (!eraserIsActive){
+        eraserIsActive = true;
         eraser.classList.remove('erase');
         eraser.classList.add('eraseActive');
     } else {
-        eraserActive = false;
+        eraserIsActive = false;
         eraser.classList.remove('eraseActive');
         eraser.classList.add('erase');
     }
@@ -110,6 +114,32 @@ function enableEraser () {
 }
 
 enableEraser();
+
+/* Toggle rainbow */
+    function toggleRainbow () {
+        const rainbow = document.querySelector('#rainbow');
+        rainbow.addEventListener('click', () => {
+    if (!rainbowIsActive) {
+        rainbowIsActive = true;
+        rainbow.classList.remove('rainbow');
+        rainbow.classList.add('rainbowActive');
+    } else {
+        rainbowIsActive = false;
+        rainbow.classList.remove('rainbowActive');
+        rainbow.classList.add('rainbow');
+    }
+
+
+    });
+
+    
+}
+
+toggleRainbow();
+
+
+
+
 
 
 
