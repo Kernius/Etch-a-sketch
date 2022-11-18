@@ -41,12 +41,17 @@ margin-right:7vw;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
+align-items:center;
 }
 
 .box {
   border: 0.1vw solid black;
 }
 
+#clear {
+  width:7vw;
+  height: 2vw;
+}
 
 
 

@@ -1,4 +1,5 @@
 let container = document.querySelector('#container');
+const gridBoxes = document.querySelectorAll('#container > div');
 let isPainting = false;
 
 /* Default sketch creation */
@@ -68,6 +69,23 @@ function paint(e) {
         let color = document.querySelector('#color').value;
         e.target.style.backgroundColor = color;
 }
+
+/* clear current sketch button*/
+
+
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', clearSketch);
+ 
+
+function clearSketch() {
+    const gridBoxes = document.querySelectorAll('#container > div');
+    gridBoxes.forEach((item) => {
+        item.style.backgroundColor = "white";
+    })
+}
+
+/* Eraser button */
+
 
 
 
