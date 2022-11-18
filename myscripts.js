@@ -30,9 +30,9 @@ function removeAllChildNodes(parent){
     const sliderVal = document.querySelector('.value');
 
     slider.addEventListener('input', function() {
-        sliderVal.textContent = slider.value;
-        removeAllChildNodes(container);
-        container.setAttribute('style', `grid-template-columns: repeat(${slider.value}, 1fr); grid-template-rows: repeat(${slider.value}, 1fr);`);
+    sliderVal.textContent = slider.value;
+    removeAllChildNodes(container);
+    container.setAttribute('style', `grid-template-columns: repeat(${slider.value}, 1fr); grid-template-rows: repeat(${slider.value}, 1fr);`);
         for (let i = 0; i < slider.value*slider.value; i++) {
             const div = document.createElement('div');
             div.classList.add('box');
