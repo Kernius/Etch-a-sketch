@@ -29,16 +29,16 @@ function removeAllChildNodes(parent){
     let slider = document.querySelector('#slider');
     const sliderVal = document.querySelector('.value');
 
-    slider.addEventListener('input', function() {
-    sliderVal.textContent = slider.value;
-    removeAllChildNodes(container);
-    container.setAttribute('style', `grid-template-columns: repeat(${slider.value}, 1fr); grid-template-rows: repeat(${slider.value}, 1fr);`);
-        for (let i = 0; i < slider.value*slider.value; i++) {
-            const div = document.createElement('div');
-            div.classList.add('box');
-            container.appendChild(div);
-        }
-        });
+        slider.addEventListener('input', function() {
+        sliderVal.textContent = slider.value;
+        removeAllChildNodes(container);
+        container.setAttribute('style', `grid-template-columns: repeat(${slider.value}, 1fr); grid-template-rows: repeat(${slider.value}, 1fr);`);
+            for (let i = 0; i < slider.value*slider.value; i++) {
+                const div = document.createElement('div');
+                div.classList.add('box');
+                container.appendChild(div);
+            }
+            });
 
 /* toggling painting on and off*/
 

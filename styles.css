@@ -119,11 +119,10 @@ body {
 
 .name {
   font-size:4vw;
-  margin-left:50vw;
+  margin-left:50.9vw;
   margin-bottom:1vw;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight:bold;
-  color:rgb(248, 114, 23);
+  font-family: fantasy, Geneva, Tahoma, sans-serif;
+  color:rgba(248, 113, 23, 0.685);
 }
 
 
