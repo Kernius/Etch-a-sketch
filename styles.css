@@ -49,10 +49,32 @@ align-items:center;
 }
 
 #clear {
-  width:7vw;
+  width:12vw;
   height: 2vw;
+  border-radius:1vw;
 }
 
+#erase {
+  width:12vw;
+  height:2vw;
+  border-radius:1vw;
+}
+
+.eraseActive {
+    width:12vw;
+    height:2vw;
+    border-radius:1vw;
+    background-color: red;
+  
+}
+
+#color {
+  width:12vw;
+  height:2vw;
+  border-radius:;
+  background-color: transparent;
+  border:none;
+}
 
 
 

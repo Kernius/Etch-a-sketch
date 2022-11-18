@@ -1,6 +1,7 @@
 let container = document.querySelector('#container');
 const gridBoxes = document.querySelectorAll('#container > div');
 let isPainting = false;
+let eraserActive = false;
 
 /* Default sketch creation */
 
@@ -66,8 +67,13 @@ function togglePaint () {
 
 
 function paint(e) {
+    if (!eraserActive){
         let color = document.querySelector('#color').value;
         e.target.style.backgroundColor = color;
+    } else { 
+        e.target.style.backgroundColor = "white";
+    }
+    
 }
 
 /* clear current sketch button*/
@@ -84,8 +90,26 @@ function clearSketch() {
     })
 }
 
-/* Eraser button */
+/* Eraser button*/
 
+
+function enableEraser () {
+    const eraser = document.querySelector('#erase');
+        eraser.addEventListener('click', () => {
+    if (!eraserActive){
+        eraserActive = true;
+        eraser.classList.remove('erase');
+        eraser.classList.add('eraseActive');
+    } else {
+        eraserActive = false;
+        eraser.classList.remove('eraseActive');
+        eraser.classList.add('erase');
+    }
+});
+
+}
+
+enableEraser();
 
 
 
