@@ -101,12 +101,13 @@ eraser.addEventListener('click', enableEraser);
 
 function enableEraser () {
         if(rainbowIsActive){
-            return;
+            rainbowIsActive = false;
+            rainbow.classList.remove('rainbowActive');
         }
     if (!eraserIsActive){
         eraserIsActive = true;
         eraser.classList.remove('erase');
-        eraser.classList.add('eraseActive');
+        eraser.classList.add('eraseActive');    
     } else {
         eraserIsActive = false;
         eraser.classList.remove('eraseActive');
@@ -121,9 +122,11 @@ rainbow.addEventListener('click', toggleRainbow)
 
 
     function toggleRainbow () {
-        if (eraserIsActive) {
-            return;
+        if(eraserIsActive){
+            eraserIsActive = false;
+            eraser.classList.remove('eraseActive');
         }
+        
     if (!rainbowIsActive) {
         rainbowIsActive = true;
         rainbow.classList.remove('rainbow');
