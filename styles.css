@@ -16,6 +16,7 @@ justify-content:space-between;
 align-items:center;
 background-color:rgba(0, 0, 0, 0.233);
 border-radius:0.3vw;
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.4)
 
 
 }
@@ -125,11 +126,13 @@ body {
   width:34vw;
   height:34vw;
   border-radius:1vw;
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.3)
   
 }
 
 .name {
   font-size:4vw;
-  margin-left:51.8vw;
+  margin-left:51vw;
   margin-bottom:1vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

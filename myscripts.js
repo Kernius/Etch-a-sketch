@@ -94,7 +94,7 @@ function clearSketch() {
     })
 }
 
-/* Eraser button*/
+/* Toggle eraser and disable rainbow*/
 
 const eraser = document.querySelector('#erase');
 eraser.addEventListener('click', enableEraser);
@@ -115,7 +115,7 @@ function enableEraser () {
     }
 }
 
-/* Toggle rainbow */
+/* Toggle rainbow and disable eraser */
 
 const rainbow = document.querySelector('#rainbow');
 rainbow.addEventListener('click', toggleRainbow)
