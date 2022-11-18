@@ -16,7 +16,8 @@ justify-content:space-between;
 align-items:center;
 background-color:rgba(0, 0, 0, 0.233);
 border-radius:0.3vw;
-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.4)
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.4);
+margin-top:4vw;
 
 
 }
@@ -105,7 +106,6 @@ body {
 }
 
 #container {
-  margin-top: 50px;
   display: inline-grid;
   grid-template-columns: repeat(16, 2fr);
   grid-template-rows: repeat(16, 2fr);
@@ -115,26 +115,25 @@ body {
   width: 575px;
   background-color:white;
   margin-bottom:2.5vw;
+  border-width:2vw;
+  border-color:rgba(0, 0, 0, 0.233);
+  box-shadow:3px 2px 22px 1px rgba(0, 0, 0, 0.3);
+  border-radius:1vw;
 }
 
 .name {
   font-size:4vw;
-  margin-left:50.9vw;
-  margin-bottom:1vw;
+  margin:0;
+  width:100%;
+  text-align:center;
   font-family: fantasy, Geneva, Tahoma, sans-serif;
   color:rgba(248, 113, 23, 0.685);
 }
 
-
-.border {
+.holder {
   display:flex;
-  align-items:center;
-  justify-content:center;
-  background-color:rgba(0, 0, 0, 0.178);
-  width:34vw;
-  height:34vw;
-  border-radius:1vw;
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.3)
-  
+  flex-direction:column;
+  margin-top:2vw;
 }
+
 
